@@ -29,7 +29,7 @@ resource "aws_instance" "web_server" {
     Name = "my_server"
   }
 
-  security_groups = ["sg-0c327a4b50873a9b3"]
+  security_groups = ["allow-all-sg"]
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
