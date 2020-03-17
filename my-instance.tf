@@ -1,7 +1,7 @@
 provider "aws" {
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
-  region     = "us-east-2"
+  region     = "${var.aws_region}"
 }
 
 data "aws_ami" "ubuntu" {
@@ -22,7 +22,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web_server" {
   ami           = "${data.aws_ami.ubuntu.id}"
-  instance_type = "t2.nano"
+  instance_type = "${var.aws_instance_type}"
   key_name      = "Automation_O1"
 
   tags {
