@@ -59,5 +59,5 @@ resource "aws_instance" "web_server" {
 
 resource "local_file" "foo" {
   content  = "Public IP : ${aws_instance.web_server.public_ip} , Instance Id : ${aws_instance.web_server.id}, DNS :${aws_instance.web_server.public_dns}"
-  filename = "/home/rle0503/output.txt"
+  filename = "/home/phoenix/.botsfactory/current/output.txt"
 }
