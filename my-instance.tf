@@ -26,7 +26,7 @@ resource "aws_instance" "web_server" {
   key_name      = "Automation_O1"
 
   tags {
-    Name = "my_server"
+    Name = "${var.aws_server_name}"
   }
 
   security_groups = ["allow-all-sg"]
